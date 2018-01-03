@@ -35,7 +35,7 @@ final class AvaTaxClientTest extends TestCase
         $model->name = "Bob's Greatest Popcorn";
         $model->title = "Owner/CEO";
         $testCompany = $client->companyInitialize($model);
-        
+        print_r($testCompany);
         // Assert that company setup succeeded
         $this->assertNotNull($testCompany, "Test company should be created");
         $this->assertTrue(count($testCompany->nexus) > 0, "Test company should have nexus");
